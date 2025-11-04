@@ -101,6 +101,18 @@ Bias and limited access; mitigated via open datasets and transparency.
 
 How do software engineering practices help?
 Testing, CI/CD, and modular design make it scalable and reliable.
+```
+
+## 📊 Pitch Deck
+
+You can view the project pitch slides here:  
+[AI-Powered Crop Yield Prediction — Pitch Deck](https://docs.google.com/presentation/d/1YJSQDroHef7e56Zs5LG8_ffxywVoK79seUZ3VG3DtDc/edit?slide=id.g3a033ef89da_0_517#slide=id.g3a033ef89da_0_517)  
+
+> Note: The slides are set to **view-only** to prevent editing.
+
+
+```
+
 👨‍💻 Contributors
 
     Amanuel Alemu Zewdu
