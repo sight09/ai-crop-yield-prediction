@@ -1,0 +1,34 @@
+import pandas as pd
+import numpy as np
+
+# Set random seed for reproducibility
+np.random.seed(42)
+
+# Generate synthetic data for 500 samples
+n_samples = 500
+rainfall = np.random.uniform(50, 400, n_samples)          # mm
+temperature = np.random.uniform(15, 35, n_samples)       # °C
+soil_quality = np.random.uniform(0.3, 1.0, n_samples)    # Index 0-1
+fertilizer_use = np.random.uniform(50, 200, n_samples)   # kg/ha
+
+# Simulate crop yield as a function of features + some noise
+yield_ = (
+    0.02 * rainfall +
+    0.5 * soil_quality +
+    0.1 * fertilizer_use -
+    0.3 * temperature +
+    np.random.normal(0, 2, n_samples)  # noise
+)
+
+# Combine into DataFrame
+data = pd.DataFrame({
+    'rainfall': rainfall,
+    'temperature': temperature,
+    'soil_quality': soil_quality,
+    'fertilizer_use': fertilizer_use,
+    'yield': yield_
+})
+
+# Save as CSV
+data.to_csv("crop_yield_dataset.csv", index=False)
+print("✅ crop_yield_dataset.csv created successfully!")
